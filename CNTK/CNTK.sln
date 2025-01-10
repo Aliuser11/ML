@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNN", "DNN\DNN.csproj", "{0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSTM", "LSTM\LSTM.csproj", "{D376E7B7-E3C1-4739-B62F-6D0EEAE027F8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CNTKUtil", "CNTKUtil\CNTKUtil\CNTKUtil.csproj", "{3EEA9C19-CE96-4796-AA73-6BF866F34064}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{D376E7B7-E3C1-4739-B62F-6D0EEAE027F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D376E7B7-E3C1-4739-B62F-6D0EEAE027F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D376E7B7-E3C1-4739-B62F-6D0EEAE027F8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3EEA9C19-CE96-4796-AA73-6BF866F34064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3EEA9C19-CE96-4796-AA73-6BF866F34064}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3EEA9C19-CE96-4796-AA73-6BF866F34064}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3EEA9C19-CE96-4796-AA73-6BF866F34064}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

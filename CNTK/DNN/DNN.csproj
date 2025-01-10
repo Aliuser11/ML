@@ -9,14 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CNTK.GPU" Version="2.7.0" />
+    <PackageReference Include="CNTK.CPUOnly" Version="2.7.0" />
     <PackageReference Include="FSharp.Core" Version="9.0.100" />
     <PackageReference Include="Microsoft.ML" Version="4.0.0" />
     <PackageReference Include="OpenCvSharp4" Version="4.10.0.20240616" />
     <PackageReference Include="XPlot.Plotly" Version="4.1.0" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CNTKUtil\CNTKUtil\CNTKUtil.csproj" />
-  </ItemGroup>
-
 </Project>

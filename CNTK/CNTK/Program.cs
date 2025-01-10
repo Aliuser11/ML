@@ -1,10 +1,10 @@
 ﻿//CNTK
 // from : https://github.com/mdfarragher/DLR/tree/master/Regression/TaxiFarePrediction and https://github.com/mdfarragher/DLR/tree/master/CNTKUtil 
 
+using CNTK;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Sample.CNTKUtil;
-using DataType = CNTK.DataType;
 
 namespace TaxiFarePrediction
 {
@@ -24,7 +24,7 @@ namespace TaxiFarePrediction
 
         class Program
         {
-            static readonly string dataPath = Path.Combine(Environment.CurrentDirectory, "yellow_tripdata_2018-12_small.csv");
+            static readonly string dataPath = @"C:\Users\dajmi\source\repos\ML\CNTK\CNTK\bin\Debug\net8.0\yellow_tripdata_2018-12_small.csv";
 
             static void Main()
             {

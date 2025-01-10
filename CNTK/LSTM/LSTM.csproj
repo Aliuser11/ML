@@ -14,8 +14,5 @@
     <PackageReference Include="OpenCvSharp4" Version="4.10.0.20240616" />
     <PackageReference Include="XPlot.Plotly" Version="4.1.0" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CNTKUtil\CNTKUtil\CNTKUtil.csproj" />
-  </ItemGroup>
 
 </Project>
