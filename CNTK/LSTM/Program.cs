@@ -15,12 +15,12 @@ namespace LstmDemo
 {
     public class Program
     {
-        private static readonly string _dataPath = Path.GetFullPath(@"..\..\..\..\Data\imdb_data.zip");
+        private static readonly string _dataPath = @"C:\Users\dajmi\source\repos\ML\CNTK\LSTM\bin\Debug\net7.0\Data\imdb_data.zip";
         public static void Main(string[] args)
         {
             if (!File.Exists("x_train_imdb.bin"))
             {
-                ZipFile.ExtractToDirectory("Data/imdb_data.zip", ".");
+                ZipFile.ExtractToDirectory(_dataPath, ".");
             }
 
             Console.WriteLine("Loading data files...");
@@ -35,10 +35,10 @@ namespace LstmDemo
                 dynamicAxes: new List<CNTK.Axis>() { CNTK.Axis.DefaultBatchAxis() });
 
             // network building
-            var lstmUnits = 32;
+            var lstmUnits = 5;
             var network = features
-                .OneHotOp(10000, true)
-                .Embedding(32)
+                //.OneHotOp(10000, true)
+                //.Embedding(32)
                 .LSTM(lstmUnits, lstmUnits)
                 .Dense(1, CNTKLib.Sigmoid)
                 .ToNetwork();
@@ -49,7 +49,7 @@ namespace LstmDemo
             var errorFunc = NetUtil.BinaryClassificationError(network.Output, labels);
 
             // set up a learner
-            var learner = network.GetAdamLearner(
+            var learner = network.GetSGDLearner(
                 learningRateSchedule: (0.001, 1),
                 momentumSchedule: (0.9, 1),
                 unitGain: true);
